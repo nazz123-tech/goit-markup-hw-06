@@ -10,7 +10,7 @@ a{
 .top{
     border-bottom: 1px solid #E7E9FC;
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
-    
+    position: relative;
 }
 .site{
     position: relative;
@@ -24,7 +24,7 @@ a{
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .site.current::after {
-    content: "";
+    content: none;
     position: absolute;
     left: 0;
     bottom: -1px;
@@ -83,6 +83,7 @@ ul{
     background-color: #404BBF;
     content: "";
 }
+
 .logo{
     font-family: "Raleway", sans-serif;
     font-size: 18px ;
@@ -96,7 +97,7 @@ ul{
 }
 .wthbtn{
     background: rgba(46, 47, 66, 0.7);
-    background: linear-gradient(to bottom, rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
+    background: linear-gradient(to bottom, rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)), url(../images/people-office-1.jpg);
     background-color: #2E2F42;
     background-repeat: no-repeat;
     background-size: cover;
@@ -107,12 +108,17 @@ ul{
     margin: 0 auto;
 }
 .title{
-    font-size: 56px;
-    font-weight: 700;
-    letter-spacing: 0.02em;
-    line-height: 1.07;
+    font-family: "Roboto";
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 36px;
+        line-height: 40px;
+        letter-spacing: 2%;
+        text-align: center;
 }
-
+.wthbtn .container{
+    max-width: 216px;
+}
 .studio{
     color:#2e2f42;
 }
@@ -127,19 +133,22 @@ ul{
     margin-bottom: 72px;
 }
 .featname{
-    font-size: 20px;
+    font-family: "Roboto";
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 36px;
+    line-height: 40px;
     letter-spacing: 0.02em;
-    line-height: 24px;
-    font-weight: 500 ;
-    color:#2E2F42;
+    text-align: center;
     margin-bottom: 8px;
 }
 .feat{
+    font-family: Roboto;
+    font-weight: 500;
+    font-style: Medium;
     font-size: 16px;
-    letter-spacing: 0.02em;
     line-height: 24px;
-    font-weight: 400;
-    color:#434455;
+    letter-spacing: 0.02em;
 }
 
 .team{
@@ -148,7 +157,7 @@ ul{
 .member{
     background-color: #FFFFFF;
     border-radius: 0px 0px 4px 4px;
-    width: calc((100% - 72px) / 4);
+    width: 100%;
     box-shadow: 0px 2px 1px 0px #2E2F4214, 0px 1px 1px 0px #2E2F4229, 0px 1px 6px 0px #2E2F4214 ;
 }
 
@@ -204,18 +213,19 @@ p{
 }
 .top .container{
     display: flex;
-    justify-content: space-between;
 }
 
 .header-nav {
     display: flex;
-    align-items: center;
+    width: 100%;
+    
 }
 img{
     display: block;
 }
 .top .logo{
-    margin-right: 76px;
+    margin: 16px 76px 16px 16px;
+    
 }
 .navigation {
     display: flex;
@@ -223,6 +233,7 @@ img{
     list-style: none;
     padding: 0;
     margin: 0;
+    display: none;
 }
 
 .contacts{
@@ -235,8 +246,7 @@ img{
     padding: 120px 0;
 }
 .wthbtn{
-    padding-top: 188px;
-    padding-bottom: 188px;
+    padding: 72px 0;
 }
 
 .title{
@@ -259,21 +269,24 @@ img{
 
 .features{
     display: flex;
-    gap:24px;
+    flex-direction: column;
+    width: 100%;
+    gap:72px;
     
 }
 .featcard{
-    width: calc((100% - 72px) / 4);
+    width: 100%;
 }
 
 .members{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap:24px;
 }
 
 .names{
     padding: 32px 0 32px ;
+    width: 100%;
 }
 .name{
     text-align: center;
@@ -292,17 +305,22 @@ img{
 .portfolios{
     display: flex;
     flex-wrap: wrap;
-    gap: 24px;
-    row-gap: 48px;
-}
-.portfolios li{
-    width: calc((100% - 48px) / 3);
+    flex-direction: column;
+    gap: 48px;
+    width: 100%;
+    align-items: center;
     
 }
+.apps {
+    width: 288px;
+    
+}
+
 .descrb{
     padding: 32px 16px;
     border: 1px solid #e7e9fc;
     border-top: none;
+    width: 100%;
 }
 
     
@@ -315,17 +333,18 @@ img{
     display: inline-block;
 }
 
-  
 
 .container {
-    width: 1158px;
+    width: 100%;
     margin: 0 auto;
-    display: block;
+    display: flex;
     align-items: center;
     padding: 0 15px 0 15px;
+    flex-direction: column;
+    justify-content: center;
 }
 .icon{
-    display: flex;
+    display: none;
     width: 264px;
     height: 112px;
     margin: 0;
@@ -385,10 +404,7 @@ img{
 .current{
     color: #404bbf;
 }
-.down{
-    display: flex;
-    align-items: baseline;
-}
+
 .icons_list_footer{
     gap:16px;
     display: flex;
@@ -411,8 +427,11 @@ img{
     content: "";
     background-color:  rgba(49, 208, 170, 1);
 }
-.leftside{
-    margin-right: 120px;
+.leftside {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
 }
 .iconsfooter{
     fill:#f4f4fd;
@@ -440,7 +459,7 @@ img{
     margin-top: 8px;
 }
 .rightside{
-    margin-right: 80px;
+    text-align: center;
 }
 
 
@@ -451,10 +470,11 @@ img{
     letter-spacing: 0.02em;
     color: #FFFFFF;
     margin-bottom: 16px;
+    text-align: center;
 }
 .user_mail{
     background-color: inherit;
-    width: 264px;
+    width: 100%;
     height: 40px;
     border: 1px solid rgba(255, 255, 255, 1);
     border-radius: 4px;
@@ -472,7 +492,7 @@ img{
 .sub_button{
     font-family: "Roboto", sans-serif;
     display: flex;
-    height: 40px;
+    align-self:center;
     min-width: 165px;
     border-radius: 4px;
     background-color: #4D5AE5;
@@ -486,7 +506,8 @@ img{
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+    min-height: 40px;
 }
 .sub_button:hover{
     background-color: #404BBF;
@@ -510,7 +531,7 @@ img{
     background-color: #FCFCFC;;
     padding: 30px;
     border-radius: 4px;
-    width: 408px;
+    width: 350px;
     min-height: 584px;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     padding: 72px 24px 24px 24px;
@@ -518,7 +539,7 @@ img{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1)
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 .modal_overlay.is-open{
@@ -575,12 +596,13 @@ img{
 .subs_div{
     display: flex;
     flex-direction: column;
-    
+    width: 288px;
 }
 .sub{
     display: flex;
     height: 40px;
     gap:24px;
+    flex-direction: column;
 }
 .send{
     fill: #FFFFFF;
@@ -663,6 +685,18 @@ img{
     cursor: pointer;
     
 }
+.menu_btn {
+    display: flex;
+    width: 17px;
+    height: 15px;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    position: absolute;
+    top: 20px;
+    right:20px;
+}
 .closing{
     width: 8px;
     height: 8px;
@@ -685,6 +719,7 @@ img{
 }
 .check_box{
     margin-bottom: 24px;
+    
 } 
 .check {
     width: 16px;
@@ -700,6 +735,7 @@ img{
     margin-right: 8px;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
 }
 .user_privacy:checked + label .check{
     background-color: #404bbf;
@@ -709,4 +745,262 @@ img{
 .policy{
     color:#4d5ae5;
 }
+ .nav_menu {
+     background-color: #FFFFFF;
+     position: fixed;
+     width: 100%;
+     height: 100%;
+     top: 0;
+     right: 0;
+     z-index: 999;
+     opacity: 0;
+     pointer-events: none;
+     
+ }
+ .nav_menu.is-open{
+    opacity: 1;
+    pointer-events: all;
+ }
+ .down {
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+     gap: 72px;
+ }
+ .navigation_modal{
+    margin: 72px 192px 100px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+ }
+ .navigation_modal_1{
+    display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0 111px 0 16px;
+ }
+ .nav_menu .cnt{
+    font-family: "Roboto";
+        font-weight: 500;
+        font-style: Medium;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 0.02em;
 
+ }
+ .nav_menu .site{
+    font-family: "Roboto";
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 36px;
+        line-height: 40px;
+        letter-spacing: 0.02em;
+ }
+ .nav_menu .icons_list_section{
+    gap:40px;
+ }
+.input-label{
+    display: flex;
+    align-items: center;
+}
+
+@media (min-width:768px){
+    .top .logo{
+        margin: 24px 120px 24px 16px;
+    }
+    .navigation{
+        display: flex;
+        margin-right: 120px;
+    }
+    .header-nav{
+        width: 600px;
+    }
+    .contacts{
+        width: 150px;
+    }
+    .menu_btn{
+        display: none;
+    }
+    
+    .contacts .navigation{
+        display: flex;
+        flex-direction: column;
+        gap:12px;
+    }
+    .cnt{
+        padding: 0;
+    }
+    
+    .top .container{
+        display:flex;
+        max-height: 72px;
+        flex-direction: row;
+        
+    }
+    .site.current::after{
+        content: "";
+    }
+    .featcard{
+        width: calc(( 100% - 24px ) / 2 );
+    }
+    .featname{
+        text-align: left;
+    }
+    .wthbtn .container{
+        min-width: 496px;
+    }
+    .title{
+            font-weight: 700;
+            font-size: 56px;
+            line-height: 60px;
+            text-align: center;
+            letter-spacing: 0.02em;
+
+    }
+    .members,.portfolios,.features{
+        flex-wrap: wrap;
+        flex-direction: initial;
+        gap:24px;
+    }
+    .members{
+        justify-content: center;
+        width: 552px;
+    }
+    .member{
+        width: initial;
+    }
+    
+    .portfolios{
+        max-width: 736px;
+    }
+    .apps{
+        flex-basis: calc((100% - 24px) / 2);
+    }
+    .down{
+        flex-wrap: wrap;
+        flex-direction: initial;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-left: 108px;
+        gap:24px;
+        max-width: 700px;
+    }
+    .leftside{
+        width: initial;
+    }
+    .sub{
+        flex-direction: row;
+    }
+    .sub_button{
+        margin-right: 24px;
+    }
+    .user_mail{
+        width: 264px;
+    }
+    .rightside{
+        text-align: left;
+    }
+    .leftside .logo, .sub_title{
+        align-self: flex-start;
+    }
+    .modal{
+        min-width: 405px;
+    }
+    .overlay,.image-wrap{
+        width: 356px;
+    }
+    .portfolios img{
+        width: 356px;
+    }
+}
+@media (min-width:1158px) {
+    .container{
+        width: 1158px; 
+    }
+    .contacts .navigation{
+        display: flex;
+        flex-direction: row;
+        gap:40px;
+        margin: 0;
+    }
+    .contacts{
+        width: initial;
+    }
+    .cnt{
+        padding: 24px 0 24px 0;
+    }
+    .header-nav{
+        width: initial;
+    }
+    .top .container{
+        justify-content: space-between;
+        gap:100px;
+    }
+    .wthbtn{
+        padding: 188px 0;
+    }
+    .title {
+        max-width: 496px;
+        margin: 0 auto 48px;
+    }
+    .wthbtn .container{
+        max-width: 1158px;
+    }
+    .icon{
+        display: flex;
+    }
+    .features,.members{
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    .featcard{
+        width: initial;
+    }
+    .featname{
+        font-weight: 500;
+        font-size: 20px;
+        margin-bottom: 8px;
+        color: #2E2F42;
+        line-height: 24px;
+    }
+    .feat{
+        font-weight: 400;
+        font-size: 16px;
+        color: #434455;
+    }
+    .apps{
+        flex-basis: calc((100% - 48px) / 3);
+    }
+    .portfolios {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            max-width: 1158px;
+    }
+    .down{
+        flex-direction: row;
+        flex-wrap: nowrap;
+        max-width: 1158px;
+        padding: 0 15px;
+        align-items: baseline;
+        gap:0
+    }
+    .leftside{
+        margin-right: 120px;
+    }
+    .rightside{
+        margin-right: 80px;
+    }
+    .icon_modal{
+        width: 18px ;
+        height: 24px ;
+    }
+ }
+@media (min-resolution: 2dppx){
+    .wthbtn{
+        background: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office-1@2x.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+}

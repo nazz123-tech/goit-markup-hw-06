@@ -218,7 +218,7 @@ p{
 
 .header-nav {
     display: flex;
-    width: 100%;
+    align-self: start;
     
 }
 img{
@@ -813,17 +813,10 @@ img{
         }
 
     .top .logo{
-        margin: 24px 120px 24px 16px;
+        margin: 24px 100px 24px 16px;
     }
     .navigation{
         display: flex;
-        margin-right: 120px;
-    }
-    .header-nav{
-        width: 600px;
-    }
-    .contacts{
-        width: 150px;
     }
     .menu_btn{
         display: none;
@@ -842,6 +835,7 @@ img{
         display:flex;
         max-height: 72px;
         flex-direction: row;
+        gap: 122px;
         
     }
     .site.current::after{
@@ -928,7 +922,7 @@ img{
         margin: 0;
     }
     .contacts{
-        width: 100%;
+        min-width: 355px;
 
     }
     .cnt{
@@ -939,7 +933,7 @@ img{
     }
     .top .container{
         justify-content: space-between;
-        gap:100px;
+        gap:332px;
     }
     .wthbtn{
         padding: 188px 0;

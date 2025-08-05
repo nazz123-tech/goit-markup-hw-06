@@ -87,7 +87,9 @@ ul{
 }
 .wthbtn{
     background: rgba(46, 47, 66, 0.7);
-    background: linear-gradient(to bottom, rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)), url(../images/people-office-1.jpg);
+    background: linear-gradient(to bottom, rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)),
+    image-set(url(../images/bg/dark-bg-mob.jpg )1x,
+            url(../images/bg/dark-bg-mob@2x.jpg )2x);
     background-color: #2E2F42;
     background-repeat: no-repeat;
     background-size: cover;
@@ -985,10 +987,7 @@ img{
     .header-nav{
         width: initial;
     }
-    .wthbtn{
-        padding: 188px 0;
-        max-width: 1440px;
-    }
+   
     .title {
         max-width: 496px;
         margin: 0 auto 48px;
@@ -1063,13 +1062,31 @@ img{
         height: 24px ;
     }
     .section {
-            padding: 120px 0;
+        padding: 120px 0;
             
         }
- }
-@media (min-resolution: 2dppx){
-    .wthbtn{
-        background: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office-1@2x.jpg);
+    .wthbtn {
+        padding: 188px 0;
+        max-width: 1440px;
+}
+}
+
+@media (min-width:768px){
+    .wthbtn {
+            background: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            image-set(url(../images/bg/dark-bg-tab.jpg)1x,
+                    url(../images/bg//dark-bg-tab@2x.jpg )2x);
+            background-size: cover;
+            background-position: center;
+        }
+}
+@media (min-width:1158px) {
+    .wthbtn {
+        background: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        image-set(
+            url(../images/bg/dark-bg-desk.jpg )1x,
+            url(../images/bg/dark-bg-desk@2x.jpg )2x
+            );
         background-size: cover;
         background-position: center;
     }

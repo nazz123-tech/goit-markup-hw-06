@@ -41,16 +41,6 @@ a{
 address{
     font-style: normal;
 }
-.cnt{
-    font-size: 16px;
-    color: #434455;
-    font-weight: 400;
-    letter-spacing: 0.02em;
-    line-height: 1.5;
-    display: block;
-    padding: 24px 0 24px;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 .cnt:hover, .cnt:focus{
     color: #404BBF;
     content: "";
@@ -113,11 +103,8 @@ ul{
         font-style: Bold;
         font-size: 36px;
         line-height: 40px;
-        letter-spacing: 2%;
+        letter-spacing: 0.02em;
         text-align: center;
-}
-.wthbtn .container{
-    max-width: 216px;
 }
 .studio{
     color:#2e2f42;
@@ -157,7 +144,6 @@ ul{
 .member{
     background-color: #FFFFFF;
     border-radius: 0px 0px 4px 4px;
-    width: 100%;
     box-shadow: 0px 2px 1px 0px #2E2F4214, 0px 1px 1px 0px #2E2F4229, 0px 1px 6px 0px #2E2F4214 ;
 }
 
@@ -225,7 +211,7 @@ img{
     display: block;
 }
 .top .logo{
-    margin: 16px 76px 16px 16px;
+    padding: 16px 0;
     
 }
 .navigation {
@@ -244,14 +230,15 @@ img{
 
 
 .section{
-    padding: 120px 0;
+    padding: 96px 0;
 }
 .wthbtn{
     padding: 72px 0;
+    max-width: 320px;
 }
 
 .title{
-    max-width: 496px;
+    max-width: 216px;
     margin:0 auto 48px;
 }
 
@@ -282,7 +269,7 @@ img{
 .members{
     display: flex;
     flex-direction: column;
-    gap:24px;
+    gap:72px;
 }
 
 .names{
@@ -314,9 +301,24 @@ img{
 }
 .apps {
     width: 288px;
-    
+    align-items: center;
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
+ .apps {
+     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+ }
 
+ .apps:hover .overlay,
+ .apps:focus .overlay {
+     transform: translateY(0);
+     content: "";
+ }
+
+ .apps:hover,
+ .apps:focus {
+     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+     content: "";
+ }
 .descrb{
     padding: 32px 16px;
     border: 1px solid #e7e9fc;
@@ -327,7 +329,7 @@ img{
     
 
 .foot{
-    padding: 100px 0 100px;
+    padding: 96px 0;
 }
 .foot .logo{
     margin-bottom: 16px;
@@ -336,12 +338,9 @@ img{
 
 .container {
             max-width: 320px;
-            padding: 0 15px;
+            padding: 0 16px;
             margin: 0 auto;
-            display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
+            
 }
     
 
@@ -392,17 +391,7 @@ img{
     color: #F4F4FD;
     padding: 40px 32px;
 }
-.apps{
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
-}
-.apps:hover .overlay, .apps:focus .overlay{
-    transform: translateY(0);
-    content: "";
-}
-.apps:hover, .apps:focus{
-    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
-    content: "";
-}
+
 .current{
     color: #404bbf;
 }
@@ -486,7 +475,9 @@ img{
     font-size: 12px;
     line-height: 2;
     letter-spacing: 0.04em;
+    width: 288px;
 }
+       
 .user_mail::placeholder{
     vertical-align: middle;
     color:#FFFFFF;
@@ -536,7 +527,7 @@ img{
     width: 350px;
     min-height: 584px;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    padding: 72px 24px 24px 24px;
+    padding: 72px 16px 16px 16px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -598,12 +589,11 @@ img{
 .subs_div{
     display: flex;
     flex-direction: column;
-    width: 288px;
+    
 }
 .sub{
     display: flex;
-    height: 40px;
-    gap:24px;
+    gap:16px;
     flex-direction: column;
 }
 .send{
@@ -682,7 +672,7 @@ img{
     vertical-align: middle;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
         border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    background-color: #e7e9fc;
+    background-color:transparent;
     padding: 0;
     cursor: pointer;
     
@@ -747,73 +737,118 @@ img{
 .policy{
     color:#4d5ae5;
 }
- .nav_menu {
-     background-color: #FFFFFF;
-     position: fixed;
-     width: 100%;
-     height: 100%;
-     top: 0;
-     right: 0;
-     z-index: 999;
-     opacity: 0;
-     pointer-events: none;
-     
- }
- .nav_menu.is-open{
-    opacity: 1;
-    pointer-events: all;
- }
+
  .down {
      display: flex;
      align-items: center;
      flex-direction: column;
      gap: 72px;
  }
- .navigation_modal{
-    margin: 72px 192px 100px 16px;
+ .input-label{
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+}
+ /* Mobile Menu*/
+ .nav_menu .site{
+    padding: 0;
+ }
+ 
+ .mobile-menu-nav{
+    margin-bottom: auto;
     
  }
- .navigation_modal_1{
+.navigation_modal{
     display: flex;
+        gap: 40px;
         flex-direction: column;
-        align-items: flex-start;
-        margin: 0 111px 0 16px;
+}
+ 
+ .nav_menu .site {
+     font-family: "Roboto";
+     font-weight: 700;
+     font-style: Bold;
+     font-size: 36px;
+     line-height: 40px;
+     letter-spacing: 0.02em;
  }
- .nav_menu .cnt{
+
+ .nav_menu .icons_list_section {
+    gap: 40px;
+    justify-content: initial;
+    margin: 0;
+     
+ }
+  .nav_menu {
+      background-color: #FFFFFF;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      right: 0;
+      z-index: 999;
+      opacity: 0;
+      pointer-events: none;
+      visibility: hidden;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  }
+
+  .nav_menu.is-open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+  }
+  .nav_menu_container{
+    position: relative;
+    padding-top: 72px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .navigation_modal_1{
+    display: flex;
+    flex-direction: column;
+    gap:24px;
+    margin-bottom: 48px;
+  }
+  .phone{
     font-family: "Roboto";
         font-weight: 500;
         font-style: Medium;
         font-size: 20px;
         line-height: 24px;
         letter-spacing: 0.02em;
-
- }
- .nav_menu .site{
+  }
+  .mail{
     font-family: "Roboto";
-        font-weight: 700;
-        font-style: Bold;
-        font-size: 36px;
-        line-height: 40px;
+        font-weight: 500;
+        font-style: Medium;
+        font-size: 20px;
+        line-height: 24px;
         letter-spacing: 0.02em;
- }
- .nav_menu .icons_list_section{
-    gap:40px;
- }
-.input-label{
-    display: flex;
-    align-items: center;
-}
+        color: #434455;
+  }
+
+
+
 
 @media (min-width:768px){
     .container {
             max-width: 768px;
         }
-
+    .cnt{
+        font-family: "Roboto";
+        color: #434455;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.04em; 
+        padding: 0;
+    }
     .top .logo{
-        margin: 24px 100px 24px 16px;
+        padding: 24px 0;
+        margin-right: 100px;
     }
     .navigation{
         display: flex;
@@ -826,16 +861,13 @@ img{
         display: flex;
         flex-direction: column;
         gap:12px;
-    }
-    .cnt{
-        padding: 0;
+        justify-content: center;
     }
     
     .top .container{
         display:flex;
-        max-height: 72px;
-        flex-direction: row;
-        gap: 122px;
+        
+        justify-content: space-between;
         
     }
     .site.current::after{
@@ -847,7 +879,7 @@ img{
     .featname{
         text-align: left;
     }
-    .wthbtn .container{
+    .title{
         min-width: 496px;
     }
     .title{
@@ -856,13 +888,20 @@ img{
             line-height: 60px;
             text-align: center;
             letter-spacing: 0.02em;
+            justify-self: center;
 
     }
     .members,.portfolios,.features{
         flex-wrap: wrap;
         flex-direction: initial;
         gap:24px;
+        row-gap: 72px;
     }
+    .wthbtn{
+        padding: 112px 0;
+        max-width: 768px;
+    }
+        
     .members{
         justify-content: center;
        
@@ -881,17 +920,17 @@ img{
         align-items: flex-start;
         padding-left: 108px;
         gap:24px;
-        max-width: 700px;
+        row-gap: 72px;
+        max-width: 768px;
     }
     .leftside{
         width: initial;
     }
     .sub{
         flex-direction: row;
+        gap:24px;
     }
-    .sub_button{
-        margin-right: 24px;
-    }
+
     .user_mail{
         width: 264px;
     }
@@ -903,6 +942,7 @@ img{
     }
     .modal{
         min-width: 405px;
+        padding: 72px 24px 24px 24px;
     }
     .overlay,.image-wrap{
         width: 356px;
@@ -910,11 +950,25 @@ img{
     .portfolios img{
         width: 356px;
     }
+    .nav_menu{
+        display: none;
+    }
 }
 @media (min-width:1158px) {
     .container{
         max-width: 1158px; 
     }
+        .cnt {
+            font-size: 16px;
+            color: #434455;
+            font-weight: 400;
+            letter-spacing: 0.02em;
+            line-height: 1.5;
+            display: block;
+            padding: 24px 0 24px;
+            transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
     .contacts .navigation{
         display: flex;
         flex-direction: row;
@@ -931,12 +985,9 @@ img{
     .header-nav{
         width: initial;
     }
-    .top .container{
-        justify-content: space-between;
-        gap:332px;
-    }
     .wthbtn{
         padding: 188px 0;
+        max-width: 1440px;
     }
     .title {
         max-width: 496px;
@@ -969,7 +1020,24 @@ img{
     }
     .apps{
         flex-basis: calc((100% - 48px) / 3);
+        box-shadow: initial;
     }
+        .apps {
+                transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+            }
+        
+            .apps:hover .overlay,
+            .apps:focus .overlay {
+                transform: translateY(0);
+                content: "";
+            }
+        
+            .apps:hover,
+            .apps:focus {
+                box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+                content: "";
+            }
+
     .portfolios {
             display: flex;
             flex-wrap: wrap;
@@ -988,12 +1056,16 @@ img{
         margin-right: 120px;
     }
     .rightside{
-        margin-right: 80px;
+        margin-right: auto;
     }
     .icon_modal{
         width: 18px ;
         height: 24px ;
     }
+    .section {
+            padding: 120px 0;
+            
+        }
  }
 @media (min-resolution: 2dppx){
     .wthbtn{
